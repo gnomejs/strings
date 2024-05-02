@@ -46,12 +46,18 @@ export class Utf8StringBuilder {
 
     /**
      * Gets the length of the string builder.
+     * @returns The length of the string builder.
      */
     get length(): number {
         return this.#length;
     }
 
-    private set length(value: number) {
+    /**
+     * Sets the length of the string builder.
+     * @param value The new length of the string builder.
+     * @private
+     */
+    protected set length(value: number) {
         this.#length = value;
     }
 

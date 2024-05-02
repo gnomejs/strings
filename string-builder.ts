@@ -29,7 +29,7 @@ export class StringBuilder {
      * @param value The new length of the string builder.
      * @private
      */
-    private set length(value: number) {
+    protected set length(value: number) {
         this.#length = value;
     }
 
