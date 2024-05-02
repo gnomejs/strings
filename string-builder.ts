@@ -43,6 +43,16 @@ export class StringBuilder {
     }
 
     /**
+     * Clears the string builder by resetting its length to zero.
+     *
+     * @returns {this} The string builder instance.
+     */
+    clear(): this {
+        this.#length = 0;
+        return this;
+    }
+
+    /**
      * Returns a new Uint8Array that contains a portion of the string builder.
      * @param start The starting index. Default is 0.
      * @param end The ending index. Default is the length of the string builder.
@@ -203,6 +213,33 @@ export class StringBuilder {
         }
         this.appendCode(10);
 
+        return this;
+    }
+
+    /**
+     * Shrinks the capacity of the string builder to the specified value.
+     * @param capacity The new capacity of the string builder.
+     * @returns The updated StringBuilder instance.
+     * @throws ArgumentRangeError if the capacity is less than 0.
+     */
+    shrinkTo(capacity: number): this {
+        if (capacity < 0) {
+            throw new ArgumentRangeError(
+                "capacity",
+                `Argument 'capacity' must be greater than -1.`,
+            );
+        }
+
+        this.#buffer = this.#buffer.slice(0, capacity);
+        return this;
+    }
+
+    /**
+     * Trims excess capacity from the string builder.
+     * @returns The updated StringBuilder instance.
+     */
+    trimExcess(): this {
+        this.shrinkTo(this.#length);
         return this;
     }
 

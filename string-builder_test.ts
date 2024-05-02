@@ -46,3 +46,11 @@ Deno.test("append", () => {
     sb.append(new StringBuilder().appendString("test"));
     equals(sb.toString(), "testtesttest");
 });
+
+Deno.test("clear", () => {
+    const sb = new StringBuilder();
+    sb.append("test");
+    sb.clear();
+    equals(sb.toString(), "");
+    equals(sb.length, 0);
+});
