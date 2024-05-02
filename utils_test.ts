@@ -1,4 +1,4 @@
-import { assert as ok, assertEquals as equals, assertFalse as no } from "@std/assert";
+import { assert as ok, assertEquals as equals, assertFalse as no } from "jsr:@std/assert";
 import * as str from "./utils.ts";
 
 Deno.test("trim", () => {

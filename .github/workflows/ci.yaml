@@ -1,4 +1,4 @@
-name: "@gnome/assert CI"
+name: "@gnome/strings CI"
 
 on:
   push:
