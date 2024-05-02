@@ -8,8 +8,9 @@
 
 ## Overview
 
-The strings module provides case insenstive methods like `equalsIgnoreCase`, `includesIgnoreCase`, `indexOfIgnoreCase`,
-`startsWithIgnoreCase`, and `endsWithIgnoreCase` to avoid using string allocation by using comparisons with
+The strings module provides case insenstive methods like `equalsIgnoreCase`,
+`includesIgnoreCase`, `indexOfIgnoreCase`, `startsWithIgnoreCase`, and
+`endsWithIgnoreCase` to avoid using string allocation by using comparisons with
 toLowerCase/toUpperCase.
 
 A `Utf8StringBuilder` class is included to avoid allocations for building text.

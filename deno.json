@@ -1,6 +1,6 @@
 {
     "name": "@gnome/strings",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "exports": {
         ".": "./mod.ts",
         "./string-builder": "./string-builder.ts",
@@ -15,7 +15,8 @@
     "fmt": {
         "indentWidth": 4,
         "useTabs": false,
-        "lineWidth": 120
+        "lineWidth": 120,
+        "exclude": ["*.md"]
     },
     "tasks": {
         "test": "deno test -A",
